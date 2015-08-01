@@ -1,0 +1,36 @@
+!.gitkeep
+
+tmp
+
+# Logs
+######################
+*.log
+logs/
+
+# Directory-based project format
+######################
+.idea/
+
+
+# Ignore the Vendors
+######################
+node_modules/
+bower_components/
+
+#Env variables
+######################
+.env
+
+# Ignore built/test files
+######################
+built/
+spec/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
