@@ -58,7 +58,7 @@
             var description = self.initialDescription;
 
 
-            description = description + '\n';
+            description ='\n࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈\n'+ description + '\n';
             description=description+'I can see something in the dark:';
 
             self.exits.forEach(function (doorway) {
