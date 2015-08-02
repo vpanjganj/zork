@@ -19,7 +19,7 @@
     function player() {
 
         //constructor
-        var player = function (name,startingLocation) {
+        var player = function (name, startingLocation) {
 
             //player properties
             this.name = name;
@@ -43,7 +43,21 @@
         }
 
 
+        //todo: add comment
+        player.prototype.takeCommand = function (commandString) {
 
+
+            var self = this;
+            var parameters = commandString.split(/[ ,]+/);
+
+            var command = parameters.shift();
+            if (typeof player.prototype[command] == 'undefined') {
+
+
+                throw new Error("Your command is unknown");
+            }
+            player.prototype[command](parameters);
+        }
 
 
         return player;

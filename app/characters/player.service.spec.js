@@ -46,7 +46,13 @@ describe('player service', function () {
                 expect(player.move).toBeDefined();
             })
 
+            it('should contain a takeCommand function', function () {
+                expect(player.takeCommand).toBeDefined();
+            })
 
+            it('should throw error when command is not found', function () {
+                expect(function(){ player.takeCommand('jump hi')}).toThrow();
+            })
         })
     });
 
