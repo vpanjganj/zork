@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/vpanjganj/Zork#readme",
   "devDependencies": {
+    "angular-mocks": "^1.4.3",
+    "angular-resource": "^1.4.3",
     "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
     "gulp-jasmine-browser": "^0.1.4",
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
