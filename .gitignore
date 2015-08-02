@@ -21,10 +21,10 @@ bower_components/
 ######################
 .env
 
-# Ignore built/test files
+# Ignore built files
 ######################
 built/
-spec/
+
 
 # OS generated files #
 ######################
