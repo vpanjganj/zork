@@ -1,7 +1,3 @@
-/**
- * Created by Vahid on 02/08/15.
- */
-
 describe('doorway service', function () {
     var doorway;
     // Setup the mock service in an anonymous module.
