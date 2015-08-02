@@ -3,26 +3,26 @@
  */
 
 
-// doorway.service.js
+// door.service.js
 (function () {
     'use strict';
 
 
     angular
         .module('app')
-        .factory('doorway', doorway);
+        .factory('door', door);
 
 
-    doorway.$inject = [];
+    door.$inject = [];
 
 
-    function doorway() {
+    function door() {
 
         //constructor
-        var doorway = function (direction,roomName) {
+        var door = function (direction,roomName) {
 
-            //doorway properties
-            this.leadsTo = roomName;// doorway points to another room, where you'll end up
+            //door properties
+            this.leadsTo = roomName;// door points to another room, where you'll end up
             this.direction = direction;// it has a direction, which is flexible, you can even have an exit way to the roof
 
             //properties that may get handy in the future
@@ -36,7 +36,7 @@
 
 
 
-        return doorway;
+        return door;
     }
 })();
 

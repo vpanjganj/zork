@@ -9,10 +9,10 @@ var gulp = require('gulp'),
 
 var paths = {
     libs: 'node_modules/angular/angular.min.js',
-    scripts: ['app/*.js','app/services/*.js','app/controllers/*.js'],
+    scripts: ['app/*.js','app/layout/*.js','app/items/*.js','app/characters/*.js'],
     testDependencies: ['node_modules/angular/angular.min.js','node_modules/angular-mocks/angular-mocks.js','node_modules/angular-resource/angular-resource.js','app/**/*.js','test/**/*.spec.js'],
-    views: 'app/views/*.html',
-    style: 'app/views/style/**/*.*'
+    views: 'app/layout/*.html',
+    style: 'app/layout/style/**/*.*'
 };
 
 gulp.task('jasmine', function () {

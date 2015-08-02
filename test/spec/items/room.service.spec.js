@@ -1,6 +1,6 @@
 describe('room service', function () {
     var room;
-    var doorway;
+    var door;
 
 
     // Setup the mock service in an anonymous module.
@@ -12,10 +12,10 @@ describe('room service', function () {
         // todo: a bit of explanation here
         inject(function ($injector) {
             var roomService = $injector.get('room');
-            var doorwayService = $injector.get('doorway');
+            var doorService = $injector.get('door');
 
 
-            doorway = new doorwayService('North', 'Room B');
+            door = new doorService('North', 'Room B');
             room = new roomService('Room A', 'A test room, with a sample description');
 
         });
@@ -45,13 +45,13 @@ describe('room service', function () {
                 expect(room.initialDescription).toBeTruthy();
             })
 
-            it('should always have a doorway property defined', function () {
+            it('should always have a door property defined', function () {
 
                 expect(room.exits).toBeDefined();
 
             })
 
-            it('should always have one or more doorway out', function () {
+            it('should always have one or more door out', function () {
                 expect(room.exits).not.toBeNull();
 
 
@@ -61,8 +61,8 @@ describe('room service', function () {
         describe(', methods', function () {
 
 
-            it('should have a addDoorway function', function () {
-                expect(room.addDoorway).toBeDefined();
+            it('should have a adddoor function', function () {
+                expect(room.adddoor).toBeDefined();
 
             })
 
@@ -73,21 +73,21 @@ describe('room service', function () {
             })
 
 
-            it("should mention the doorways in description", function () {
+            it("should mention the doors in description", function () {
 
                 //todo: need explanation
-                room.addDoorway(doorway);
+                room.adddoor(door);
 
                 //console.log(room.getDescription())
                 expect(room.getDescription()).toEqual('\n࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈\nA test room, with a sample description\nI can see something in the dark:\nIt seems like a door in the North');
             });
 
-            it("should not add more than one doorway in the each direction", function () {
+            it("should not add more than one door in the each direction", function () {
 
                 //todo: need explanation
-                room.addDoorway(doorway);
+                room.adddoor(door);
                 expect(function () {
-                    room.addDoorway(doorway)
+                    room.adddoor(door)
                 }).toThrow();
             });
 

@@ -38,7 +38,7 @@
         player.prototype.move = function (direction) {
             var self = this;
 
-            //self.currentLocation = currentLocation.doorWay.getNextRoom();
+            //self.currentLocation = currentLocation.door.getNextRoom();
 
         }
 
