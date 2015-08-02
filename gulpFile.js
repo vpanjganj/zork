@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 var paths = {
     libs: 'node_modules/angular/angular.min.js',
-    scripts: ['app/*.js','app/layout/*.js','app/items/*.js','app/characters/*.js','!app/**/*.spec.js'],
+    scripts: ['app/app.module.js','app/app.config.js','app/items/*.js','app/characters/*.js','app/services/*.js','!app/**/*.spec.js','app/layout/*.js'],
     testDependencies: ['node_modules/angular/angular.min.js','node_modules/angular-mocks/angular-mocks.js','node_modules/angular-resource/angular-resource.js','app/**/*.js'],
     views: 'app/layout/*.html',
     style: 'app/layout/style/**/*.*'
