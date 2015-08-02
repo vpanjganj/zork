@@ -43,7 +43,7 @@
             });
 
             if (found) {
-                throw "";
+                throw new Error("You can't put two exit doors in one direction")
             }
 
             self.exits.push(door);
@@ -58,7 +58,7 @@
             var description = self.initialDescription;
 
 
-            description ='\n࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈\n'+ description + '\n';
+            description = description + '\n';
             description=description+'I can see something in the dark:';
 
             self.exits.forEach(function (door) {

@@ -79,7 +79,7 @@ describe('room service', function () {
                 room.adddoor(door);
 
                 //console.log(room.getDescription())
-                expect(room.getDescription()).toEqual('\n࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈\nA test room, with a sample description\nI can see something in the dark:\nIt seems like a door in the North');
+                expect(room.getDescription()).toEqual('A test room, with a sample description\nI can see something in the dark:\nIt seems like a door in the North');
             });
 
             it("should not add more than one door in the each direction", function () {
@@ -88,7 +88,7 @@ describe('room service', function () {
                 room.adddoor(door);
                 expect(function () {
                     room.adddoor(door)
-                }).toThrow();
+                }).toThrowError();
             });
 
 
