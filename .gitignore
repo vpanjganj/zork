@@ -1,11 +1,9 @@
 !.gitkeep
 
-tmp
-
 # Logs
 ######################
 *.log
-logs/
+
 
 # Directory-based project format
 ######################
@@ -15,7 +13,6 @@ logs/
 # Ignore the Vendors
 ######################
 node_modules/
-bower_components/
 
 #Env variables
 ######################
