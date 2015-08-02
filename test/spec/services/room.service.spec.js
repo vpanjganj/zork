@@ -14,8 +14,10 @@ describe('room service', function () {
             var roomService = $injector.get('room');
             var doorwayService = $injector.get('doorway');
 
-            room = new roomService()
-            doorway = new doorwayService();
+
+            doorway = new doorwayService('North', 'Room B');
+            room = new roomService('Room A', 'A test room, with a sample description');
+
         });
 
     });
@@ -38,19 +40,20 @@ describe('room service', function () {
                 expect(room.name).toBeTruthy();
             })
             it('should have a description', function () {
-                expect(room.description).toBeDefined();
-                expect(room.description).not.toBeNull();
-                expect(room.description).toBeTruthy();
+                expect(room.initialDescription).toBeDefined();
+                expect(room.initialDescription).not.toBeNull();
+                expect(room.initialDescription).toBeTruthy();
             })
 
             it('should always have a doorway property defined', function () {
+
                 expect(room.exits).toBeDefined();
-                expect(room.exits).not.toBeNull();
 
             })
 
             it('should always have one or more doorway out', function () {
-                expect(room.exits.length).toBeGreaterThan(0);
+                expect(room.exits).not.toBeNull();
+
 
             })
         })
@@ -63,24 +66,31 @@ describe('room service', function () {
 
             })
 
+
             it('should have a getDescription function', function () {
                 expect(room.getDescription).toBeDefined();
 
             })
 
-            it("should not add more than one doorway in the each direction", function () {
-
-                //todo: need explanation
-                room.addDoorway(doorway);
-                expect(room.addDoorway(doorway)).toThrow();
-            });
 
             it("should mention the doorways in description", function () {
 
                 //todo: need explanation
                 room.addDoorway(doorway);
-                expect(room.getDescription()).toEqual('');
+
+                //console.log(room.getDescription())
+                expect(room.getDescription()).toEqual('A test room, with a sample description\nI can see something in the dark:\nIt seems like a door in the North');
             });
+
+            it("should not add more than one doorway in the each direction", function () {
+
+                //todo: need explanation
+                room.addDoorway(doorway);
+                expect(function () {
+                    room.addDoorway(doorway)
+                }).toThrow();
+            });
+
 
         })
     });
