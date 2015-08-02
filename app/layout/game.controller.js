@@ -11,20 +11,22 @@ angular
     .module('app')
     .controller('gameController', gameController);
 
-    gameController.$inject = [ 'player', '$scope'];
+    gameController.$inject = [ 'player', '$scope','journal'];
 
-function gameController(player,scope) {
+function gameController(player,scope,journal) {
     var self = this;
-    scope.test = 'hi';
+    scope.journal = journal;
+
     self.player = new player();
-
-    show();
-
     function show() {
 
 
+        self.player.takeCommand('move up');
 
     }
+    show();
+
+
 
 
 }

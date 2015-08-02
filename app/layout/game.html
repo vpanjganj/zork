@@ -32,7 +32,7 @@
 <body ng-app="app">
 <ng-view>
 
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
 
@@ -60,7 +60,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="journal">Journal:</label>
-                        <textarea class="form-control black" rows="20" id="journal" ng-readonly="true"></textarea>
+                        <textarea class="form-control black" ng-model="journal.content" rows="20" id="journal" ng-readonly="true"></textarea>
                     </div>
 
                     <div class="form-group">
