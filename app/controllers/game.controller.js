@@ -9,11 +9,11 @@
 
 angular
     .module('app')
-    .controller('game', game);
+    .controller('gameController', gameController);
 
-game.$inject = [ 'player', '$scope'];
+    gameController.$inject = [ 'player', '$scope'];
 
-function game(player,scope) {
+function gameController(player,scope) {
     var self = this;
     scope.test = 'hi';
     self.player = new player();
