@@ -3,7 +3,7 @@
  */
 
 
-// journalLogger.service.js
+// journal.service.js
 (function () {
     'use strict';
 
@@ -11,6 +11,12 @@
     angular
         .module('app')
         .service('journal', journal);
+
+
+
+    journal.$inject = [];
+
+
 
     function journal() {
 
