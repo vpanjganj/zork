@@ -11,7 +11,8 @@ var paths = {
     libs: 'node_modules/angular/angular.min.js',
     scripts: ['app/*.js','app/services/*.js','app/controllers/*.js'],
     testDependencies: ['node_modules/angular/angular.min.js','node_modules/angular-mocks/angular-mocks.js','node_modules/angular-resource/angular-resource.js','app/**/*.js','test/**/*-spec.js'],
-    views: 'app/views/*.html'
+    views: 'app/views/*.html',
+    style: 'app/views/style/**/*.*'
 };
 
 gulp.task('jasmine', function () {
@@ -23,7 +24,9 @@ gulp.task('jasmine', function () {
 gulp.task('views', function () {
     return gulp.src(paths.views).pipe(gulp.dest('built/'));
 });
-
+gulp.task('style', function () {
+    return gulp.src(paths.style).pipe(gulp.dest('built/style'));
+});
 
 gulp.task('scripts', function () {
     return gulp.src(paths.scripts).pipe(concat('app.js')).pipe(gulp.dest('built/js'));
@@ -35,7 +38,7 @@ gulp.task('libs', function () {
 });
 
 
-gulp.task('default', ['scripts', 'views',   'libs']);
+gulp.task('default', ['scripts', 'views', 'style',  'libs']);
 
 gulp.task('watch', function () {
 

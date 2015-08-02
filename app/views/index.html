@@ -2,16 +2,23 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
-    <title>Blackjack</title>
+    <title>Zork</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Blackjack">
+    <meta name="description"
+          content="This is a very basic implementation of the game Zork. Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure.">
+    <meta name="author" content="Vahid Panjganj">
 
-    <title>Heroic Features - Start Bootstrap Template</title>
+    <title>Zork, text based adventure</title>
 
-
+    <!-- Le styles -->
+    <link href="style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style/css/bootstrap-theme.min.css" rel="stylesheet">
+    <style>
+        body {
+        }
+    </style>
 
 
     <!--[if lt IE 9]>
@@ -21,12 +28,54 @@
 
 </head>
 
+
 <body ng-app="app">
 <ng-view>
-    <div ng-controller="game">
-        <input ng-model="test">
+
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+                <a class="brand" href="index.html"> ࿈ Zork ࿈ </a>
+
+            </div>
+
+
+            <ul class="nav navbar-nav">
+
+                <li class=""><a href="https://github.com/vpanjganj/zork" target="_blank">Github</a></li>
+                <li><a href="mailto:panjganj@gmail.com">Contact</a></li>
+
+            </ul>
+
+
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+
+    <div class="container" ng-controller="game">
+        <div class="well well-lg black">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="journal">Journal:</label>
+                        <textarea class="form-control black" rows="20" id="journal" ng-readonly="true"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="command">Command:</label>
+                        <input type="text" class="form-control black" id="command" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <!-- /container -->
+
 </ng-view>
+
+
 <!-- libs -->
 <script src="js/libs.js"></script>
 
