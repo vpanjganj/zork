@@ -1,4 +1,4 @@
-describe('playerService', function () {
+describe('player service', function () {
     var player;
 
 
@@ -16,7 +16,7 @@ describe('playerService', function () {
     });
 
 
-    describe(', object', function () {
+    describe(', player object', function () {
 
         it('should exist', function () {
 
