@@ -1,8 +1,9 @@
 .black {
-    background-color: black !important;;
+    background-color: black !important;
     border-color: black !important;
-}
 
+}
+.brand{color: black !important;}
 .btn-default .badge,
 .btn-primary .badge,
 .btn-success .badge,
