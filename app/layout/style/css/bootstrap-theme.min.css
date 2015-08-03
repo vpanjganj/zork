@@ -1,6 +1,8 @@
 .black {
     background-color: black !important;
     border-color: black !important;
+    font-size: 15px !important;
+    min-height: 60px!important;
 
 }
 .brand{color: black !important;}
