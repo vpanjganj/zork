@@ -1,5 +1,5 @@
 /*
- * todo: add some comments here
+ * The journal keeps track of the events
  */
 
 
@@ -20,9 +20,11 @@
 
     function journal() {
 
-        this.content='game starting';
+        this.content="Generating the game...";
+
         this.addToJournal = function (log) {
-            this.content = this.content + '\n࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈-࿈\n' + log;
+            //each event will get separated
+            this.content = this.content + '\n------------------------------------\n\n' + log;
 
         };
     }
