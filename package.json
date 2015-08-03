@@ -34,7 +34,7 @@
   "scripts": {
 
 
-    "postinstall": "./node_modules/gulp/bin/gulp.js default",
+    "postinstall": "./node_modules/gulp/bin/gulp.js",
     "prestart": "npm install",
     "start": "http-server -a localhost -p  8000 -c-1 built -o "
 
