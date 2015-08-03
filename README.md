@@ -67,7 +67,7 @@ The tests are  written in
 Jasmine Browser].
 
 
-* the unit tests are found in the test folder and are named as `*.spec.js`.
+* the unit tests are found next to the original files and are named as `*.spec.js`.
 
 The easiest way to run the unit tests is to use the supplied gulp script, the open the browser on
 `http://localhost:8888/`:
