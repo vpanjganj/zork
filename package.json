@@ -30,5 +30,14 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^4.3.4",
     "http-server": "^0.8.0"
+  },
+  "scripts": {
+
+
+    "postinstall": "./node_modules/gulp/bin/gulp.js default",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p  8000 -c-1 built -o "
+
+
   }
 }
