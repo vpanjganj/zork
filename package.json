@@ -4,7 +4,9 @@
   "description": "This is a very basic implementation of the game Zork. Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "gulp default",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p  8000 -c-1 built -o "
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/vpanjganj/Zork#readme",
   "devDependencies": {
+    "angular": "^1.4.3",
     "angular-mocks": "^1.4.3",
     "angular-resource": "^1.4.3",
     "gulp": "^3.9.0",
@@ -34,9 +37,9 @@
   "scripts": {
 
 
-    "postinstall": "./node_modules/gulp/bin/gulp.js",
+    "postinstall": "./node_modules/gulp/bin/gulp.js default",
     "prestart": "npm install",
-    "start": "http-server -a localhost -p  8000 -c-1 built -o "
+    "start": "http-server -a localhost -p  8000 -c-1 build -o "
 
 
   }

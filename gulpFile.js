@@ -15,11 +15,7 @@ var paths = {
     style: 'app/layout/style/**/*.*'
 };
 
-gulp.task('jasmine', function () {
-    return gulp.src(paths.testDependencies).pipe(watch(paths.testDependencies))
-        .pipe(jasmine.specRunner()).pipe(watch(paths.testDependencies))
-        .pipe(jasmine.server({port: 8888}));
-});
+
 
 gulp.task('views', function () {
     return gulp.src(paths.views).pipe(gulp.dest('built/'));
@@ -37,6 +33,11 @@ gulp.task('libs', function () {
 
 });
 
+gulp.task('jasmine', function () {
+    return gulp.src(paths.testDependencies).pipe(watch(paths.testDependencies))
+        .pipe(jasmine.specRunner()).pipe(watch(paths.testDependencies))
+        .pipe(jasmine.server({port: 8888}));
+});
 
 gulp.task('default', ['scripts', 'views', 'style',  'libs']);
 
