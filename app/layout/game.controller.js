@@ -1,6 +1,4 @@
-/*
- * todo: add some comments here
- */
+
 
 
 // game.controller.js
@@ -11,20 +9,16 @@ angular
     .module('app')
     .controller('gameController', gameController);
 
-    gameController.$inject = [ 'player', '$scope','journal'];
+    gameController.$inject = [ 'player', '$scope','journal','house'];
 
-function gameController(player,scope,journal) {
-    var self = this;
-    scope.journal = journal;
-
-    self.player = new player();
-    function show() {
+function gameController(player,scope,journal,house) {
+    var game = this;
 
 
-        self.player.takeCommand('move up');
 
-    }
-    show();
+    game.journal = journal;
+
+    game.player = new player('Tom',house.getRoomByName('Room A'));
 
 
 
