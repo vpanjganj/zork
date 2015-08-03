@@ -54,19 +54,26 @@
     </nav>
 
 
-    <div class="container" ng-controller="gameController">
+    <div class="container" ng-controller="gameController as game">
         <div class="well well-lg black">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="journal">Journal:</label>
-                        <textarea class="form-control black" ng-model="journal.content" rows="20" id="journal" ng-readonly="true"></textarea>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="command">Command:</label>
-                        <input type="text" class="form-control black" id="command" autocomplete="off" autofocus>
-                    </div>
+                    <form ng-submit="game.player.takeCommand(command);command=''" name="commandForm" >
+                        <div class="form-group">
+                            <label for="journal">Journal:</label>
+                            <textarea class="form-control black" ng-model="game.journal.content" rows="20" id="journal" ng-readonly="true" scroll-bottom></textarea>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="command">Command:</label>
+                            <input type="text"  class="form-control input-lg black" ng-model="command" name="command" id="command" autocomplete="off" autofocus>
+                        </div>
+                    </form>
+
+
+
+
                 </div>
             </div>
         </div>
