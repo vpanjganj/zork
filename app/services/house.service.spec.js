@@ -9,7 +9,7 @@ describe('house service', function () {
 
         inject(function ($injector) {
             house = $injector.get('house');
-
+            house.rooms=[];
             var roomService = $injector.get('room');
 
 
@@ -22,7 +22,7 @@ describe('house service', function () {
     describe(', house service', function () {
 
         it('should exist', function () {
-
+''
 
             expect(house).toBeDefined();
 
@@ -48,7 +48,7 @@ describe('house service', function () {
             });
 
             it('should contain an init function', function () {
-                expect(house.getRoomByName).toBeDefined();
+                expect(house.initialize).toBeDefined();
             });
 
 
