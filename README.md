@@ -1,5 +1,5 @@
 # Zork
-
+[![Code Climate](https://codeclimate.com/github/vpanjganj/zork/badges/gpa.svg)](https://codeclimate.com/github/vpanjganj/zork/badges/gpa.svg)
 This is a very basic implementation of the game Zork. Zork is one of the earliest interactive fiction computer games, with roots drawn from the original genre game, Colossal Cave Adventure.
 
 ## Getting Started
